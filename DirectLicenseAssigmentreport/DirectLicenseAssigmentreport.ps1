@@ -9,9 +9,6 @@
 Connect-MsolService
 
 
-[CmdletBinding()]
-param ()
-
 # Fetch all users
 $allUsers = Get-MsolUser -All -ErrorAction Stop
 

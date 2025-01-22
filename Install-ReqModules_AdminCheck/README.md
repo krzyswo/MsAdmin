@@ -1,89 +1,37 @@
-PowerShell Script for Module Updates and Import
+# PowerShell Script to Check and Update Modules
 
-Overview
+## Overview
+This PowerShell script checks if the script is run with administrator privileges, lists several Microsoft modules, and compares the current installed version with the latest available version. If a newer version is found, the script prompts the user to install the update. It also imports the required modules for further use.
 
-This PowerShell script performs the following tasks:
+## Prerequisites
+- **Administrator Privileges:** The script requires administrator privileges to function properly.
+- **PowerShell Version:** Ensure that you are running a compatible version of PowerShell.
+- **Installed Modules:** This script checks and updates the following modules:
+  - MSOnline
+  - AzureAD
+  - Microsoft.Online.SharePoint.PowerShell
+  - ExchangeOnlineManagement
+  - MicrosoftTeams
+  - Microsoft.Graph
 
-Administrator Privileges Check:
+## Script Workflow
+1. **Check for Administrator Privileges:**  
+   The script will check if it is running with administrator privileges. If not, a warning is shown, and the script exits.
 
-Ensures the script is executed with administrator privileges. If not, it prompts the user to run the script as an administrator and exits.
+2. **Check for Available Module Updates:**  
+   For each module in the list, the script checks if a newer version is available compared to the current version installed on the system. If an update is available:
+   - The current and latest version numbers are displayed.
+   - You are prompted to confirm if you want to install the update (Y/N).
 
-Module Update Check:
+3. **Module Installation:**  
+   If you choose to update a module, it is installed using the `Install-Module` cmdlet.
 
-Checks for the latest versions of specific PowerShell modules.
+4. **Import Modules:**  
+   After the updates (if any), the script imports all the necessary modules to ensure they are available for further use.
 
-Prompts the user to update modules if a newer version is available.
+## Usage Instructions
 
-Module Import:
-
-Imports the required PowerShell modules after ensuring they are updated.
-
-Modules Checked for Updates
-
-The script checks and updates the following PowerShell modules:
-
-MSOnline
-
-AzureAD
-
-Microsoft.Online.SharePoint.PowerShell
-
-ExchangeOnlineManagement
-
-MicrosoftTeams
-
-Microsoft.Graph
-
-How to Use the Script
-
-Open PowerShell as Administrator:
-
-Right-click the PowerShell application and select "Run as Administrator."
-
-Execute the Script:
-
-Copy the script into a .ps1 file (e.g., UpdateModules.ps1).
-
-Run the script in the PowerShell console by entering:
-
-.\UpdateModules.ps1
-
-Follow Prompts:
-
-The script will notify you if a module has a newer version available.
-
-Enter Y to update the module or N to skip the update.
-
-Prerequisites
-
-Administrator Privileges:
-
-Ensure you have administrator privileges to execute the script and install/update modules.
-
-PowerShellGet Module:
-
-Ensure you have PowerShellGet installed to enable module management. Update it if needed using:
-
-Install-Module -Name PowerShellGet -Force
-
-Error Handling
-
-If a module is not found, the script will notify you.
-
-Ensure an active internet connection for the script to check and download updates.
-
-Notes
-
-The -Force flag in Install-Module ensures the module is installed without additional confirmation prompts.
-
-The script is compatible with PowerShell 5.1 and later.
-
-The Import-Module commands at the end ensure all modules are loaded into the session after updates.
-
-License
-
-This script is provided "as-is" without warranty of any kind. Use it at your own risk.
-
-Disclaimer
-
-Ensure you test this script in a controlled environment before using it in production systems.
+1. Open PowerShell **as Administrator**.
+2. Run the script by executing the following command:
+   ```powershell
+   .\Install-ReqModules_AdminCheck.ps1

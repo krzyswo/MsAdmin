@@ -1,5 +1,5 @@
 # Connect to Exchange Online
-Connect-ExchangeOnline -UserPrincipalName admin@example.com
+Connect-ExchangeOnline
 
 # Get a list of all mailboxes
 Get-Mailbox

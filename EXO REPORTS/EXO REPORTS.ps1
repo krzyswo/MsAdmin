@@ -4,8 +4,8 @@ Connect-ExchangeOnline -UserPrincipalName admin@example.com
 # Get a list of all mailboxes
 Get-Mailbox
 
-# Get a list of mailboxes that have been inactive for more than 90 days
-Get-StaleMailboxReport -InactiveMailboxDays 90
+# Get a list of mailboxes that have been inactive for more than 90 days but it is depreciated needs to be done on GRAPH now.
+# Get-StaleMailboxReport -InactiveMailboxDays 90
 
 # Get a list of mailboxes that have not been logged into in the past 30 days
 Get-InactiveMailboxReport -InactiveDays 30

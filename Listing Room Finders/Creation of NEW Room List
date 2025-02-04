@@ -1,0 +1,3 @@
+#create new Room Finder List
+
+New-DistributionGroup -Name "DL_PLACEHOLDER" -Alias "DL_PLACEHOLDER" -RoomList -IgnoreNamingPolicy

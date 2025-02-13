@@ -1,7 +1,6 @@
 Exchange Online Mailbox Automaping_check
 
 
-Description
 This PowerShell script connects to Exchange Online, retrieves and checks mailbox permissions for a specified user on a target mailbox. It verifies if AutoMapping is enabled for the user on the mailbox.
 
 Prerequisites

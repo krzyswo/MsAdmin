@@ -1,8 +1,8 @@
-# If not working check that:
+# If not working check below:
 # Ensure MSOnline module is up to date
 #Uninstall-Module -Name MSOnline -Force
 #Install-Module -Name MSOnline -Force
-# Import the MSOnline module
+#Import the MSOnline module
 #Import-Module MSOnline
 
 # Connect to Microsoft Online services
@@ -22,6 +22,7 @@ foreach ($user in $allUsers) {
         <#
             The "GroupsAssigningLicense" array contains objectId's of groups which inherit licenses.
             If the array contains an entry with the user's own objectId, the license was assigned directly to the user.
+            
             If the array contains no entries and the user has a license assigned, it is also a direct license assignment.
         #>
         if ($license.GroupsAssigningLicense -contains $user.ObjectId -or $license.GroupsAssigningLicense.Count -lt 1) {

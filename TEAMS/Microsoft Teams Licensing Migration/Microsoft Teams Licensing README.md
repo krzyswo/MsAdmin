@@ -1,6 +1,6 @@
 # Microsoft Teams Licensing Changes: What You Need to Know    
 
-Microsoft made the decision to introduce a new licensing structure designed to better meet the needs of Teams users and modern room setups. The previous system lacked clarity in terms of features, and many licenses overlapped unnecessarily. By restructuring to include **Basic, Pro, and Shared Device licenses**, Microsoft has made it easier to match licenses to actual use cases, such as small meeting rooms, shared devices, or advanced office spaces that need more robust functionalities.    
+Microsoft made the decision to introduce a new licensing ( https://www.microsoft.com/en-us/licensing/news/microsoft365-teams-ww ) structure designed to better meet the needs of Teams users and modern room setups. The previous system lacked clarity in terms of features, and many licenses overlapped unnecessarily. By restructuring to include **Basic, Pro, and Shared Device licenses**, Microsoft has made it easier to match licenses to actual use cases, such as small meeting rooms, shared devices, or advanced office spaces that need more robust functionalities.    
   
 These changes officially took effect starting **July 1, 2023**, with the goal of supporting hybrid work scenarios while ensuring businesses only pay for the features they truly need. At the same time, it helps reduce inefficiencies caused by legacy licenses that didn’t always align with the complexity of today’s Teams features.    
   

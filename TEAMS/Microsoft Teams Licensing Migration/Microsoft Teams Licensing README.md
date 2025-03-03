@@ -1,84 +1,123 @@
-# Microsoft Teams Licensing Changes: What You Need to Know    
+# Microsoft Teams Licensing Changes: What You Need to Know
 
-Microsoft made the decision to introduce a new licensing ( https://www.microsoft.com/en-us/licensing/news/microsoft365-teams-ww ) structure designed to better meet the needs of Teams users and modern room setups. The previous system lacked clarity in terms of features, and many licenses overlapped unnecessarily. By restructuring to include **Basic, Pro, and Shared Device licenses**, Microsoft has made it easier to match licenses to actual use cases, such as small meeting rooms, shared devices, or advanced office spaces that need more robust functionalities.    
-  
-These changes officially took effect starting **July 1, 2023**, with the goal of supporting hybrid work scenarios while ensuring businesses only pay for the features they truly need. At the same time, it helps reduce inefficiencies caused by legacy licenses that didn’t always align with the complexity of today’s Teams features.    
-  
----  
-   
-## Who Is Affected?    
-  
-In my experience, these changes directly affect several types of organizations and setups.    
-  
-- If you’re using **Teams Rooms devices** (like Logitech systems, Crestron hardware, or Surface Hub), then these licensing updates will directly impact how those systems are managed and what features are available.    
-- If your organization relies on **Azure Active Directory dynamic groups** or automated systems to assign licenses, these workflows may break due to the new Product IDs introduced with the updated licenses.    
-- If you’re transitioning away from legacy licenses, you might face challenges because the new licensing tiers (Basic, Pro, Shared Device) don’t have one-to-one equivalents.    
-  
-For smaller businesses that rely primarily on standard Teams desktop applications, these changes might be less noticeable unless Teams Rooms devices are a part of their environment.    
-  
----  
-   
-## Consequences for Customers    
-  
-### Licensing    
-  
-With the introduction of this new tiered system, the licenses—**Basic, Shared Device, and Pro**—don’t perfectly align with their older counterparts. Devices and features now need to be carefully mapped to the correct new licenses to avoid overpaying for functionality you don’t use, or worse, under-licensing and losing access to critical tools.    
-  
-### Budget    
-  
-This new structure can impact budgets, and I’ve seen firsthand how it forces organizations to rethink how they allocate resources:    
-  
-- **Basic Licenses**: These are fine for small or simpler setups, but there’s a hard cap of **25 per tenant**. Beyond that, you’ll need to switch to Pro licenses, which increases costs. This means Basic might only make sense if you’ve got a handful of smaller rooms that don’t need much functionality.    
-- **Shared Device Licenses**: These are designed for shared-use equipment, such as conference telephones or panel displays. However, it’s worth noting these licenses offer limited features and don’t include access to Teams Rooms Pro tools for advanced management.    
-- **Pro Licenses**: These are where the full functionality resides. Using these, you get access to features like **Teams Rooms Pro Management Portal**, advanced analytics, and centralized device monitoring. However, these cost noticeably more than legacy licenses, and that additional expense can add up quickly for larger organizations.    
-  
-### Automation
-  
-If your organization uses **dynamic groups** to manage license assignments, you’ll need to make manual adjustments. I’ve found that the new licenses have updated **Product IDs**, meaning any automation based on the old IDs will need to be reconfigured to avoid errors.    
-  
-### Documentation and Cleanup    
-  
-For those responsible for Teams Rooms deployments, now’s the time to review your records. I recommend creating or updating your inventory of devices in use, along with the features they require. This will help prevent over-provisioning and ensure you’re not paying for Pro licenses where Basic or Shared Device licenses might suffice.    
-  
----  
-   
-## How to:   
-  
-Start with an audit of all your meeting room devices. Identify the equipment you’re using in each room—cameras, microphones, touch panels, and so on—and match those details with the features your organization requires. This level of granularity is crucial for determining the most cost-effective license assignments.    
+Microsoft has introduced a new licensing structure designed to better align with the needs of Teams users and modern meeting room setups. The previous system lacked clarity, with overlapping licenses that often led to inefficiencies. By restructuring licenses into **Basic, Pro, and Shared Device** tiers, Microsoft has simplified the process of assigning the right license for different use cases, such as small meeting rooms, shared devices, or advanced office spaces requiring more robust functionalities.
 
-Based on the audit:    
-  
-- Assign **Shared Device licenses** to shared conference phones or panels where limited functionality is enough.    
-- Use **Basic licenses** for smaller and less complex rooms, keeping in mind the **25-license-per-tenant** limit.    
-- Apply **Pro licenses** to larger, high-demand rooms that need advanced capabilities like analytics or deeper management options.   
-  
-If you’re automating license assignments—like using Azure AD dynamic groups—it’s update those workflows. Replace old license Product IDs with the new ones. 
-!Test your changes before rolling them out to prevent any disruption to active licenses.!   
-  
----  
-  
-### New Product IDs    
-  
-One challenge I ran into was integrating the new Product IDs into our systems. The old IDs are now irrelevant, so we had to revisit all automation scripts, dynamic groups, and workflows tied to license assignments. It’s not difficult per se, but it’s time-consuming and easy to overlook.    
-  
-### Limited Functionality in Basic Licenses    
-  
-- **Basic licenses** are restrictive—they don’t provide access to the **Teams Rooms Pro Management Portal**, and this limits how much visibility and control you have over smaller rooms.    
-- Similarly, **Shared Device licenses** may work for telephony or similar equipment, but they severely restrict advanced features.    
-  
-### Cost   
-  
-The **Pro licenses** are excellent if you need advanced tools like analytics, monitoring, or premium room support, but the cost can quickly become a burden if you require these for many rooms. Careful budgeting is necessary.    
-  
-### No One-to-One License Scope    
-  
-Finally, since the new licenses don’t directly correlate with the old ones, I had to start from scratch when mapping licenses to meeting rooms and devices. This task requires a deep understanding of both your hardware setup and each room’s feature requirements.    
-  
----  
-   
-From my experience, here’s how to approach this transition:    
-  
-- **Document Everything**: Maintain an accurate inventory of your Teams Rooms setups and align each device with its required functionality. Only assign costly Pro licenses to rooms that truly need premium features.    
-- **Evaluate Costs**: Use the migration process to evaluate the financial impact. We worked with our Microsoft representative to ensure we weren’t exceeding budget unnecessarily.    
-- **Test Trial Licenses**: Before fully committing to the changes, we tested some licenses using free trials. This allowed us to confirm what worked best for our environment.    
-- **Simplify Workflows**: If your license management is automated, ensure your scripts have been updated and tested. I recommend testing your new system in a sandbox environment before applying it to production.    
+These changes officially took effect on **July 1, 2023**, with the goal of supporting hybrid work environments while ensuring organizations pay only for the features they need. The new structure also reduces inefficiencies caused by legacy licenses that did not always align with the complexity of modern Teams features.
+
+---
+
+## Who Is Affected?
+
+These changes impact various organizations and setups, particularly those that rely on Teams-integrated devices and automated license management.
+
+- **Teams Rooms Devices**  
+  Organizations using **Logitech systems, Crestron hardware, Surface Hub, and similar equipment** will need to adapt to the new licensing model, as it affects system management and feature availability.
+
+- **License Automation**  
+  Organizations using **Azure Active Directory (Azure AD) dynamic groups** or automated license assignment workflows may experience disruptions due to the introduction of new Product IDs. Adjustments will be necessary to maintain automation.
+
+- **Legacy License Transitions**  
+  The new licensing tiers—**Basic, Pro, and Shared Device**—do not have direct one-to-one equivalents with previous licenses, requiring careful reassessment of licensing needs.
+
+Smaller businesses that primarily use standard Teams desktop applications may notice minimal impact unless they deploy Teams Rooms devices.
+
+---
+
+## Consequences for Customers
+
+### Licensing
+
+The introduction of **Basic, Shared Device, and Pro** licenses requires careful mapping of devices and features to the appropriate tier to avoid overpaying or losing essential functionality.
+
+### Budget Considerations
+
+The new licensing structure affects budgeting and resource allocation:
+
+- **Basic Licenses**  
+  Suitable for small or simple setups but limited to **25 per tenant**. Organizations exceeding this limit must upgrade to Pro licenses, increasing costs.
+
+- **Shared Device Licenses**  
+  Designed for shared-use equipment, such as conference telephones and panel displays. However, these licenses provide limited functionality and exclude access to **Teams Rooms Pro Management Portal**.
+
+- **Pro Licenses**  
+  The most feature-rich option, providing access to **advanced analytics, centralized device monitoring, and the Teams Rooms Pro Management Portal**. However, these licenses are significantly more expensive than legacy options, which can impact larger deployments.
+
+### Automation Adjustments
+
+Organizations using **Azure AD dynamic groups** for automated license assignments must manually update workflows. The **Product IDs** for the new licenses differ from previous versions, requiring updates to automation scripts and configurations.  
+**Testing these changes before deployment is essential to avoid disruptions.**
+
+### Documentation and Cleanup
+
+To ensure a smooth transition, organizations should:
+
+- Conduct a **review of all Teams Rooms deployments**.
+- Update **device inventories**, including associated features and required licenses.
+- Avoid over-provisioning by assigning only the necessary license tier for each setup.
+
+---
+
+## Implementation Guide
+
+### 1. Conduct an Audit
+
+Identify all meeting room devices, including cameras, microphones, and touch panels. Cross-reference this inventory with the necessary features to determine the most cost-effective licensing assignments.
+
+### 2. Assign the Appropriate Licenses
+
+- **Shared Device Licenses**  
+  Assign to shared-use equipment like conference phones and panel displays where advanced functionality is unnecessary.
+
+- **Basic Licenses**  
+  Use for small, simple meeting rooms, keeping in mind the **25-license-per-tenant limit**.
+
+- **Pro Licenses**  
+  Reserve for high-demand rooms that require advanced analytics, monitoring, or management features.
+
+### 3. Update Automation Workflows
+
+For organizations automating license assignments:
+
+- Replace outdated **Product IDs** with the new ones in Azure AD or custom scripts.
+- **Test workflow updates** before applying them to production environments to prevent disruptions.
+
+---
+
+## Key Considerations
+
+### New Product IDs
+
+All previous **Product IDs** are now obsolete, requiring updates to all systems that rely on automated license assignments.  
+Organizations should verify and adjust their scripts, dynamic groups, and related workflows accordingly.
+
+### Limited Functionality in Basic Licenses
+
+- **Basic licenses** do not provide access to the **Teams Rooms Pro Management Portal**, restricting visibility and control for small meeting rooms.
+- **Shared Device licenses** are intended for telephony and similar devices but do not support advanced management features.
+
+### Cost Management
+
+- **Pro licenses** offer comprehensive functionality but come at a higher cost.
+- A careful budgeting strategy is necessary to prevent unnecessary expenditures, especially in larger deployments.
+
+### No Direct License Equivalents
+
+Since the new licensing structure does not directly map to the previous system, organizations must reassess their requirements from the ground up.  
+This process involves evaluating both the hardware setup and the specific feature needs of each meeting room.
+
+---
+
+## Best Practices for a Smooth Transition
+
+- **Document Everything**  
+  Maintain an up-to-date inventory of Teams Rooms setups and ensure each device has the correct license.  
+  Avoid assigning costly Pro licenses where a Basic or Shared Device license suffices.
+
+- **Evaluate Costs**  
+  Review the financial impact of the transition. Engaging with a Microsoft representative can help optimize licensing costs.
+
+- **Test Trial Licenses**  
+  Utilize free trial periods to determine the best licensing model before committing to purchases.
+
+- **Simplify Workflows**  
+  Ensure automation scripts are updated, tested, and validated in a sandbox environment before full deployment.

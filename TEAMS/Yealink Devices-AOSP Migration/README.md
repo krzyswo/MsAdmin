@@ -26,11 +26,11 @@ For smaller businesses that rely primarily on standard Teams desktop application
    
 ## Consequences for Customers    
   
-### Licensing Complexity    
+### Licensing    
   
 With the introduction of this new tiered system, the licenses—**Basic, Shared Device, and Pro**—don’t perfectly align with their older counterparts. If you, like many others, were reliant on legacy licenses, you’ll need to take a closer look at your Teams Rooms environment. Devices and features now need to be carefully mapped to the correct new licenses to avoid overpaying for functionality you don’t use, or worse, under-licensing and losing access to critical tools.    
   
-### Budget Considerations    
+### Budget    
   
 This new structure can impact budgets, and I’ve seen firsthand how it forces organizations to rethink how they allocate resources:    
   
@@ -38,39 +38,27 @@ This new structure can impact budgets, and I’ve seen firsthand how it forces o
 - **Shared Device Licenses**: These are designed for shared-use equipment, such as conference telephones or panel displays. However, it’s worth noting these licenses offer limited features and don’t include access to Teams Rooms Pro tools for advanced management.    
 - **Pro Licenses**: These are where the full functionality resides. Using these, you get access to features like **Teams Rooms Pro Management Portal**, advanced analytics, and centralized device monitoring. However, these cost noticeably more than legacy licenses, and that additional expense can add up quickly for larger organizations.    
   
-### Automation Challenges    
+### Automation Challenges
   
 If your organization uses **dynamic groups** to manage license assignments, you’ll need to make manual adjustments. I’ve found that the new licenses have updated **Product IDs**, meaning any automation based on the old IDs will need to be reconfigured to avoid errors.    
   
-### Documentation and Deployment Cleanup    
+### Documentation and Cleanup    
   
 For those responsible for Teams Rooms deployments, now’s the time to review your records. I recommend creating or updating your inventory of devices in use, along with the features they require. This will help prevent over-provisioning and ensure you’re not paying for Pro licenses where Basic or Shared Device licenses might suffice.    
   
 ---  
    
-## Steps To Migrate Users to the New Licenses    
-  
-If you’re managing the migration process, here’s how I approached it:    
-  
-### Audit Teams Rooms Deployments    
+## How to Migrate     
   
 Start with an audit of all your meeting room devices. Identify the equipment you’re using in each room—cameras, microphones, touch panels, and so on—and match those details with the features your organization requires. This level of granularity is crucial for determining the most cost-effective license assignments.    
-  
-### Match Devices to the Correct Licenses    
-  
+
 Based on the audit:    
   
 - Assign **Shared Device licenses** to shared conference phones or panels where limited functionality is enough.    
 - Use **Basic licenses** for smaller and less complex rooms, keeping in mind the **25-license-per-tenant** limit.    
-- Apply **Pro licenses** to larger, high-demand rooms that need advanced capabilities like analytics or deeper management options.    
-  
-### Update Automation Tools    
+- Apply **Pro licenses** to larger, high-demand rooms that need advanced capabilities like analytics or deeper management options.   
   
 If you’re automating license assignments—like using Azure AD dynamic groups—it’s vital to update those workflows. Replace old license Product IDs with the new ones. Test your changes before rolling them out to prevent any disruption to active licenses.    
-  
-### Communicate Changes Internally    
-  
-Don’t forget to inform your internal teams of these updates. IT staff, budget owners, and stakeholders need to understand how this impacts costs, feature access, and device management processes. Clear communication can prevent misunderstandings and support smoother adoption of the new structure.    
   
 ---  
    

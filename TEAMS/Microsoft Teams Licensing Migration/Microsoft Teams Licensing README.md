@@ -107,8 +107,7 @@ This process involves evaluating both the hardware setup and the specific featur
 
 ---
 
-## Best Practices for a Smooth Transition
-
+## Best Practices and Lesson Learned
 - **Document Everything**  
   Maintain an up-to-date inventory of Teams Rooms setups and ensure each device has the correct license.  
   Avoid assigning costly Pro licenses where a Basic or Shared Device license suffices.

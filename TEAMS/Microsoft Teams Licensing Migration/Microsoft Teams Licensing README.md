@@ -22,7 +22,7 @@ For smaller businesses that rely primarily on standard Teams desktop application
   
 ### Licensing    
   
-With the introduction of this new tiered system, the licenses—**Basic, Shared Device, and Pro**—don’t perfectly align with their older counterparts. If you, like many others, were reliant on legacy licenses, you’ll need to take a closer look at your Teams Rooms environment. Devices and features now need to be carefully mapped to the correct new licenses to avoid overpaying for functionality you don’t use, or worse, under-licensing and losing access to critical tools.    
+With the introduction of this new tiered system, the licenses—**Basic, Shared Device, and Pro**—don’t perfectly align with their older counterparts. Devices and features now need to be carefully mapped to the correct new licenses to avoid overpaying for functionality you don’t use, or worse, under-licensing and losing access to critical tools.    
   
 ### Budget    
   

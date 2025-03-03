@@ -69,7 +69,7 @@ One challenge I ran into was integrating the new Product IDs into our systems. T
   
 The **Pro licenses** are excellent if you need advanced tools like analytics, monitoring, or premium room support, but the cost can quickly become a burden if you require these for many rooms. Careful budgeting is necessary.    
   
-### No One-to-One Mapping    
+### No One-to-One License Scope    
   
 Finally, since the new licenses don’t directly correlate with the old ones, I had to start from scratch when mapping licenses to meeting rooms and devices. This task requires a deep understanding of both your hardware setup and each room’s feature requirements.    
   

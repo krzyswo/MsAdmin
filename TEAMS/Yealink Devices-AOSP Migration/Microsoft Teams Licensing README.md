@@ -42,7 +42,7 @@ For those responsible for Teams Rooms deployments, now’s the time to review yo
   
 ---  
    
-## Steps to follow:    
+## How to:   
   
 Start with an audit of all your meeting room devices. Identify the equipment you’re using in each room—cameras, microphones, touch panels, and so on—and match those details with the features your organization requires. This level of granularity is crucial for determining the most cost-effective license assignments.    
 
@@ -52,7 +52,8 @@ Based on the audit:
 - Use **Basic licenses** for smaller and less complex rooms, keeping in mind the **25-license-per-tenant** limit.    
 - Apply **Pro licenses** to larger, high-demand rooms that need advanced capabilities like analytics or deeper management options.   
   
-If you’re automating license assignments—like using Azure AD dynamic groups—it’s vital to update those workflows. Replace old license Product IDs with the new ones. Test your changes before rolling them out to prevent any disruption to active licenses.    
+If you’re automating license assignments—like using Azure AD dynamic groups—it’s update those workflows. Replace old license Product IDs with the new ones. 
+!Test your changes before rolling them out to prevent any disruption to active licenses.!   
   
 ---  
   

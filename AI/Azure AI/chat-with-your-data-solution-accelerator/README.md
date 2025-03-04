@@ -1,6 +1,6 @@
-# How to Create Your Personal Interview Assistant
+# How to Create Your Personal Assistant
 
-If you struggle with presenting your skills and experience during interviews, a personal interview assistant can be a valuable tool. This assistant will introduce what you do and highlight your expertise when needed. You can host it on GitHub and deploy it using Microsoft's AI solutions. Here’s how you can set it up.
+If you struggle with presenting your skills and experience during interviews, a personal interview assistant can be a valuable tool. This assistant will introduce what you do and highlight your expertise when needed. You can host it on Azure and deploy it using Microsoft's AI solutions. Here’s how you can set it up.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ Before starting, ensure you have:
 - An active Microsoft Azure subscription
 - A GitHub account (which will store the assistant’s reference data)
 
-## Deploying Your Interview Assistant
+## Deploying Your Assistant
 
 Microsoft provides a [Chat with Your Data solution accelerator](https://github.com/Azure-Samples/chat-with-your-data-solution-accelerator?tab=readme-ov-file) that allows you to create an AI-powered assistant. You can deploy it in two ways: a quick, template-based method or a more advanced method using Visual Studio Code (which will be covered in future articles). Today, we will focus on the easy and fast deployment approach.
 

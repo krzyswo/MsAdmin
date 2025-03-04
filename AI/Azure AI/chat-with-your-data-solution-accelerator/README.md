@@ -66,6 +66,8 @@ To ensure everything has been properly uploaded and indexed:
 2. Navigate to the **User Chat** section and interact with the assistant.
 3. Ask questions related to your projects and skills to confirm the assistant retrieves the correct information.
 ![image](https://github.com/user-attachments/assets/ed96a8f2-aace-48b8-9e78-61da621a63ef)
+![image](https://github.com/user-attachments/assets/77661533-19f9-4b14-82a6-971146df17a7)
+
 
 ## Conclusion
 

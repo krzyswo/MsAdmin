@@ -87,7 +87,6 @@ foreach ($event in $meetingData) {
 To avoid dealing with orphaned meetings in the future, you can:
 
 - **Encourage End Dates for Recurring Meetings** – Ensure all recurring meetings have a defined expiration.
-- **Implement Automated Cleanup Policies** – Use API solutions to periodically review and remove abandoned meetings.
 - **Train Employees on Meeting Management** – Educate users on properly canceling or transferring meetings before leaving the company.
 
 ## Final Thoughts

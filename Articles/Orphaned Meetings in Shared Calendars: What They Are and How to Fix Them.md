@@ -27,53 +27,53 @@ A more flexible and scalable approach is using Microsoft Graph API, which allows
 The following PowerShell script demonstrates how to connect to Microsoft Graph and remove orphaned meetings from shared calendars based on data provided in a CSV file.
 
 ```powershell
-# Connect to Microsoft Graph using application credentials
-$tenantId = "<Your-Tenant-ID>"
-$clientId = "<Your-Client-ID>"
-$clientSecret = Get-Credential -UserName $clientId  # Securely enter the client secret
+# Connect to IPPS session
+$UserPrincipalName = "<your-upn>"  # Replace with your actual UPN
+Connect-IPPSSession -UserPrincipalName $UserPrincipalName
 
-Connect-MgGraph -TenantId $tenantId -ClientSecretCredential $clientSecret
+# Retrieve compliance searches and actions
+Get-ComplianceSearch
+Get-ComplianceSearchAction
 
-# Import the CSV file containing meeting subjects and dates
-$csvFilePath = "C:\Path\To\Meetings.csv"
-$meetingData = Import-Csv -Path $csvFilePath 
+# Purge compliance search results
+$searchName = "Results full year 2022"
+for ($i = 0; $i -lt 30; $i++) {
+    New-ComplianceSearchAction -SearchName $searchName -Purge -PurgeType SoftDelete -Confirm:$false
+}
 
-# Loop through each meeting entry
-foreach ($event in $meetingData) {
-    $params = @{
-        subject = $event.Subject
-        body = @{
-            contentType = "HTML"
-            content = "This is an automated cleanup task."
-        }
-        start = @{
-            dateTime = "$($event.StartDate)T00:00:00"
-            timeZone = "UTC"
-        }
-        end = @{
-            dateTime = "$($event.EndDate)T00:00:00"
-            timeZone = "UTC"
-        }
-        isOnlineMeeting = $false
-    }
+# Paths to CSV files
+$csvFilePathlogi = "<your-path>\logi.csv"
+$csvFilePath = "<your-path>\users1.csv"
 
-    Write-Host "Processing meeting: $($params.subject)"
+# Import Event IDs from CSV
+if (Test-Path $csvFilePathlogi) {
+    $eventIds = Import-Csv -Path $csvFilePathlogi | ForEach-Object { $_.eventId }
+} else {
+    Write-Host "Error: CSV file with event IDs not found at $csvFilePathlogi"
+    exit
+}
 
-    # Import the CSV file containing user email addresses
-    $userCsvPath = "C:\Path\To\Users.csv"
-    $userUPNs = Import-Csv -Path $userCsvPath | ForEach-Object { $_.UPN }
+# Import User UPNs from CSV
+if (Test-Path $csvFilePath) {
+    $userUPNs = Import-Csv -Path $csvFilePath | ForEach-Object { $_.UPN }
+} else {
+    Write-Host "Error: CSV file with user UPNs not found at $csvFilePath"
+    exit
+}
 
-    # Loop through each user and remove the orphaned meeting
+# Loop through each user UPN and remove the specified calendar events
+foreach ($eventId in $eventIds) {
     foreach ($userUPN in $userUPNs) {
-        $userId = $userUPN
-        $userCalendar = Get-MgUserCalendar -UserId $userId | Where-Object { $_.IsDefaultCalendar -eq $true }
-        
-        if ($userCalendar) {
-            $calendarId = $userCalendar.Id
-            New-MgUserCalendarEvent -UserId $userId -CalendarId $calendarId -BodyParameter $params
+        if ($userUPN -and $eventId) {
+            Remove-MgUserEvent -UserId $userUPN -EventId $eventId -ErrorAction Continue
+        } else {
+            Write-Host "Skipping empty UPN or Event ID"
         }
     }
 }
+
+Write-Host "Script execution completed."
+
 
 ```` 
 ## Why Use Microsoft Graph?

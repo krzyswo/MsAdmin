@@ -27,52 +27,10 @@ A more flexible and scalable approach is using Microsoft Graph API, which allows
 The following PowerShell script demonstrates how to connect to Microsoft Graph and remove orphaned meetings from shared calendars based on data provided in a CSV file.
 
 ```powershell
-# Connect to IPPS session
-$UserPrincipalName = "<your-upn>"  # Replace with your actual UPN
-Connect-IPPSSession -UserPrincipalName $UserPrincipalName
+Import-Module Microsoft.Graph.Calendar
 
-# Retrieve compliance searches and actions
-Get-ComplianceSearch
-Get-ComplianceSearchAction
-
-# Purge compliance search results
-$searchName = "Results full year 2022"
-for ($i = 0; $i -lt 30; $i++) {
-    New-ComplianceSearchAction -SearchName $searchName -Purge -PurgeType SoftDelete -Confirm:$false
-}
-
-# Paths to CSV files
-$csvFilePathlogi = "<your-path>\logi.csv"
-$csvFilePath = "<your-path>\users1.csv"
-
-# Import Event IDs from CSV
-if (Test-Path $csvFilePathlogi) {
-    $eventIds = Import-Csv -Path $csvFilePathlogi | ForEach-Object { $_.eventId }
-} else {
-    Write-Host "Error: CSV file with event IDs not found at $csvFilePathlogi"
-    exit
-}
-
-# Import User UPNs from CSV
-if (Test-Path $csvFilePath) {
-    $userUPNs = Import-Csv -Path $csvFilePath | ForEach-Object { $_.UPN }
-} else {
-    Write-Host "Error: CSV file with user UPNs not found at $csvFilePath"
-    exit
-}
-
-# Loop through each user UPN and remove the specified calendar events
-foreach ($eventId in $eventIds) {
-    foreach ($userUPN in $userUPNs) {
-        if ($userUPN -and $eventId) {
-            Remove-MgUserEvent -UserId $userUPN -EventId $eventId -ErrorAction Continue
-        } else {
-            Write-Host "Skipping empty UPN or Event ID"
-        }
-    }
-}
-
-Write-Host "Script execution completed."
+# A UPN can also be used as -UserId.
+Remove-MgUserEvent -UserId $userId -EventId $eventId
 
 
 ```` 

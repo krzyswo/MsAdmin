@@ -24,7 +24,6 @@ Admins can use PowerShell cmdlets such as `Remove-CalendarEvents` to remove cale
 A more flexible and scalable approach is using Microsoft Graph API, which allows admins to programmatically manage calendar events, including orphaned meetings. With the right permissions, IT teams can automate the removal of unwanted meetings without relying on manual processes or requiring additional licenses.
 
 #### Example: Removing Orphaned Meetings Using Microsoft Graph
-The following PowerShell script demonstrates how to connect to Microsoft Graph and remove orphaned meetings from shared calendars based on data provided in a CSV file.
 
 ```powershell
 Import-Module Microsoft.Graph.Calendar

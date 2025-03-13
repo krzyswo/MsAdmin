@@ -9,7 +9,7 @@ This PowerShell script removes calendar events in Exchange Online for a specific
 - Permissions to manage calendar events in Exchange Online.  
    
 # Output  
-The script will remove calendar events for the specified user within the defined query window of 360 days. It will cancel organized meetings for the user during this period. ** Cancelling these meetings removes them from the user and resource calendars.
+The script will remove calendar events for the specified user within the defined query window of 360 days. It will cancel organized meetings for the user during this period. **Cancelling these meetings removes them from the user and resource calendars.**
    
 # Notes  
 - Ensure you have the necessary permissions to perform calendar event removal.  **

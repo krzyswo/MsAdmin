@@ -1,3 +1,14 @@
+# Connect to Exchange Online
+Connect-ExchangeOnline
+
+# Define the list of mailboxes to check
+# Replace with your actual list of resource mailboxes or user mailboxes
+$list = @(
+    "room1@yourdomain.com",
+    "room2@yourdomain.com",
+    "room3@yourdomain.com"
+)
+
 $settings = @()
  
 foreach ($obj in $list)

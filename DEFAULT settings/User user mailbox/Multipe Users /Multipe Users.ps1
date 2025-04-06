@@ -1,16 +1,8 @@
-a. Prepare the CSV File:
-
-Create a CSV file (e.g., MailboxList.csv) with a header named MailboxIdentity and list the email addresses or aliases of the target mailboxes. For example:
+Connect-ExchangeOnline
 
 # Define the path to the CSV file and the log file
 $CsvFilePath = "C:\Path\To\MailboxList.csv"
 $LogFilePath = "C:\Path\To\MailboxConfigLog.txt"
-
-MailboxIdentity
-user1@domain.com
-user2@domain.com
-room1@domain.com
-
 
 # Function to log messages with timestamps
 function Write-Log {

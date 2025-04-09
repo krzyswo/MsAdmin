@@ -5,9 +5,13 @@ This PowerShell script connects to Microsoft Graph using application credentials
 
 Prerequisites
 PowerShell environment
+
 Installation of the Microsoft.Graph module using the command: Install-Module Microsoft.Graph -Scope CurrentUser -Force -AllowClobber
+
 Importing the Microsoft.Graph.Authentication module
+
 Valid Microsoft Graph application credentials (tenant ID, client ID, and client secret)
+
 Access to Microsoft Graph API
 
 Output

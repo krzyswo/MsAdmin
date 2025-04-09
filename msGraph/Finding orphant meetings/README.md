@@ -1,4 +1,3 @@
-Title
 Microsoft Graph Calendar Events Organizer Verification
 
 Description

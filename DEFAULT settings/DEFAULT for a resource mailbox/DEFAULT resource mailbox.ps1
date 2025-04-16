@@ -1,6 +1,6 @@
 Connect-ExchangeOnline
 
-# Configure calendar settings for a resource mailbox
+# Configuring calendar settings for a resource mailbox
 Set-MailboxCalendarConfiguration -Identity "<MailboxIdentity>" `
     -RemindersEnabled $false `
     -DefaultReminderTime "00:05:00" `

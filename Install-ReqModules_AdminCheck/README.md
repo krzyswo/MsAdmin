@@ -28,10 +28,3 @@ This PowerShell script checks if the script is run with administrator privileges
 
 4. **Import Modules:**  
    After the updates (if any), the script imports all the necessary modules to ensure they are available for further use.
-
-## Usage Instructions
-
-1. Open PowerShell **as Administrator**.
-2. Run the script by executing the following command:
-   ```powershell
-   .\Install-ReqModules_AdminCheck.ps1

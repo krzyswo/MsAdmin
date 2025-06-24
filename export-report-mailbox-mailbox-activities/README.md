@@ -2,10 +2,6 @@
 
 Using this PowerShell script, you can identify non-audited mailbox activities and improve the mailbox security by enabling them.
 
-**Sample Output:**
-
-The script exports an output CSV file that looks like the screenshot below.
-
 **Name:** export-report-mailbox-mailbox-activities
 **Description:** This script helps in exporting a report of non-audited mailbox activities to enhance mailbox security.
 **Prerequisites:** PowerShell, appropriate permissions to access mailboxes.
